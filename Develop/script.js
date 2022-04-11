@@ -5,6 +5,7 @@ var numbers = "1234567890";
 var special = "!@#$%^&*()";
 var passwordLength;
 var password = "";
+var providedAns;
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -62,5 +63,45 @@ function generatePassword() {
   } else if (!charsLower && !numbers && !special) {
     providedAns = charsLower.concat(charsLower, special, numbers);
     console.log(providedAns);
+  } else if (!charsLower && !charsUpper) {
+    providedAns = charsLower.concat(charsUpper);
+    console.log(providedAns);
+  } else if (!charsLower && !numbers) {
+    providedAns = charsLower.concat(numbers);
+    console.log(providedAns);
+  } else if (!charsUpper && !numbers) {
+    providedAns = charsUpper.concat(numbers);
+    console.log(providedAns);
+  } else if (!charsLower && !special) {
+    providedAns = charsLower.concat(special);
+    console.log(providedAns);
+  } else if (!charsUpper && !special) {
+    providedAns = charsUpper.concat(special);
+    console.log(providedAns);
+  } else if (!numbers && !special) {
+    providedAns = numbers.concat(special);
+    console.log(providedAns);
+  }else if (!numbers) {
+    providedAns = numbers.concat;
+    console.log(providedAns);
+  }else if (!special) {
+    providedAns = special.concat;
+    console.log(providedAns);
+  }else if (!charsUpper) {
+    providedAns = charsUpper.concat;
+    console.log(providedAns);
+  }else if (!charsLower) {
+    providedAns = charsLower.concat;
+    console.log(providedAns);
   }
+
+
+for (var i = 0, n = password.length; i < length; ++i) {
+  providedAns += password.charAt(Math.floor(Math.random() * n));
+ 
+  console.log();
+  return password;
 }
+
+}
+
